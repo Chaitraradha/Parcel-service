@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                sh 'rm -rf hello-world-war'
-                sh 'git clone https://github.com/Chaitraradha/weather-update.git'
+                sh 'rm -rf Parcel-service'
+                sh 'git clone https://github.com/Chaitraradha/Parcel-service.git'
             }
         }
        stage('build') {
@@ -13,3 +13,5 @@ pipeline {
                     sh 'mvn clean install'
                   }
        }
+    }
+}
